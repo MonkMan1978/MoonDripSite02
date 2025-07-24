@@ -1,90 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Calculator Page</title>
+  <meta charset="UTF-8" />
+  <title>DCA Calculator | MoonDrip Labs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
-  <h1>Welcome to the DCA Calculator</h1>
-  <p>This is the test page!</p>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>MoonDrip Calculators</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
 
-<body>
-
-  <!-- 🔹 Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">MoonDrip</a>
-
-      <div class="nav-menu">
-        <a href="/calculator.html" class="nav-link">Calculator</a>
-        <a href="/about.html" class="nav-link">About</a>
-        <a href="/education.html" class="nav-link">Education</a>
-        <a href="/sponsors.html" class="nav-link">Sponsors</a>
-        <a href="/join.html" class="nav-link">Join</a>
-      </div>
-
-      <button id="themeToggle" class="theme-toggle">🌙</button>
-
-      <div class="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">🌙 MoonDrip</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="calculator.html">DCA Calculator</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- 🔹 Intro Section -->
-  <section class="about">
-    <h2>The MoonDrip Calculator Suite</h2>
-    <p>Welcome to your decentralized financial toolkit. This is more than just math — it’s clarity in chaos, tailored for long-term thinkers, curious learners, and full-blown crypto degens alike.</p>
-    <p>Each calculator helps you simulate strategies, manage risk, and grow smarter without hype or guesswork.</p>
-  </section>
+  <!-- Main Calculator Form -->
+  <main class="calculator-page">
+    <section class="calculator-container">
+      <h1>Crypto DCA Calculator</h1>
+      <p class="subtitle">Compare Dollar-Cost Averaging vs Lump Sum investment strategies</p>
 
-  <!-- 🔹 Calculator Grid -->
-  <section class="calculator-grid">
-    <div class="calc-card">
-      <h3>📆 DCA Backtester</h3>
-      <p>See how dollar-cost averaging would’ve performed with any token over time.</p>
-      <a href="https://moondriplabs.com" class="cta-button alt" target="_blank" rel="noopener noreferrer">
-  🔁 Try Our Live DCA Calculator
-</a>
+      <form action="https://moondriplabs.com/api/calculate" method="POST" class="dca-form">
 
-    </div>
+        <label for="token">Token Symbol</label>
+        <input type="text" id="token" name="token_symbol" placeholder="e.g., BTC" required />
 
-    <div class="calc-card">
-      <h3>🔒 Staking Rewards</h3>
-      <p>Estimate returns and compare APR vs APY across staking platforms.</p>
-      <a href="#" class="cta-button secondary">Coming Soon</a>
-    </div>
+        <label for="amount">Investment Amount (USD)</label>
+        <input type="number" id="amount" name="investment_amount" placeholder="1000" required />
 
-    <div class="calc-card">
-      <h3>💧 Liquidity Pool ROI</h3>
-      <p>Simulate impermanent loss and yield farming scenarios for LPs.</p>
-      <a href="#" class="cta-button secondary">Coming Soon</a>
-    </div>
+        <label>Investment Frequency</label>
+        <div class="frequency-options">
+          <label><input type="radio" name="frequency" value="daily" checked> Daily</label>
+          <label><input type="radio" name="frequency" value="weekly"> Weekly</label>
+          <label><input type="radio" name="frequency" value="biweekly"> Bi-Weekly</label>
+          <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
+        </div>
 
-    <div class="calc-card">
-      <h3>⚠️ Risk Management</h3>
-      <p>Build your own risk profile and simulate different portfolio strategies.</p>
-      <a href="#" class="cta-button secondary">Coming Soon</a>
-    </div>
-  </section>
+        <label for="chart_type">Chart Type</label>
+        <select name="chart_type" id="chart_type">
+          <option value="line">Line Chart</option>
+          <option value="bar">Bar Chart</option>
+        </select>
 
-  <!-- 🔹 Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 MoonDrip by Root Kore Labs. All rights reserved.</p>
-    <p class="legal-content">⚠️ This is a backtest tool, not a prediction engine. Results are based on historical data and do not guarantee future performance.</p>
-  </footer>
+        <label for="granularity">Price Granularity</label>
+        <select name="granularity" id="granularity">
+          <option value="daily">Daily</option>
+          <option value="hourly">Hourly</option>
+        </select>
 
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" name="start_date" required />
+
+        <label for="end_date">End Date</label>
+        <input type="date" id="end_date" name="end_date" required />
+
+        <button type="submit" class="submit-btn">Calculate DCA Strategy 🚀</button>
+      </form>
+    </section>
+  </main>
+
 </body>
 </html>
