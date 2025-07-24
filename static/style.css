@@ -165,7 +165,7 @@ body::before {
   color: #1a1625;
   padding: 18px 40px;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 16px;
   font-weight: 700;
   font-size: 1.1rem;
   transition: all 0.3s ease;
