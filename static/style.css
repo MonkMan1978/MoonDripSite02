@@ -1086,6 +1086,12 @@ to { opacity: 1; transform: translateY(0); }
 }
 
 /* Container Fix for Global Centering */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
 
 /* Hero */
 .hero {
@@ -1112,6 +1118,21 @@ to { opacity: 1; transform: translateY(0); }
 }
 
 /* CTA Banner */
+.cta-banner {
+  background: linear-gradient(90deg, #1a1a2e, #161622);
+  padding: 4rem 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.cta-button.big {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
 /* Responsive Touches */
 @media (min-width: 768px) {
   .feature-grid {
