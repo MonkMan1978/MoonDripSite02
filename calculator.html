@@ -1,0 +1,67 @@
+ <!-- 🔹 Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">MoonDrip</a>
+
+      <div class="nav-menu">
+        <a href="/calculator.html" class="nav-link">Calculator</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/join.html" class="nav-link">Join</a>
+      </div>
+
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </nav>
+
+   <!-- 🔹 Intro Section -->
+  <section class="about">
+    <h2>The MoonDrip Calculator Suite</h2>
+    <p>Welcome to your decentralized financial toolkit. This is more than just math — it’s clarity in chaos, tailored for long-term thinkers, curious learners, and full-blown crypto degens alike.</p>
+    <p>Each calculator helps you simulate strategies, manage risk, and grow smarter without hype or guesswork.</p>
+  </section>
+
+  <!-- 🔹 Calculator Grid -->
+  <section class="calculator-grid">
+    <div class="calc-card">
+      <h3>📆 DCA Backtester</h3>
+      <p>See how dollar-cost averaging would’ve performed with any token over time.</p>
+      <a href="https://moondriplabs.com" class="cta-button alt" target="_blank" rel="noopener noreferrer">
+  🔁 Try Our Live DCA Calculator
+</a>
+
+    </div>
+
+    <div class="calc-card">
+      <h3>🔒 Staking Rewards</h3>
+      <p>Estimate returns and compare APR vs APY across staking platforms.</p>
+      <a href="#" class="cta-button secondary">Coming Soon</a>
+    </div>
+
+    <div class="calc-card">
+      <h3>💧 Liquidity Pool ROI</h3>
+      <p>Simulate impermanent loss and yield farming scenarios for LPs.</p>
+      <a href="#" class="cta-button secondary">Coming Soon</a>
+    </div>
+
+    <div class="calc-card">
+      <h3>⚠️ Risk Management</h3>
+      <p>Build your own risk profile and simulate different portfolio strategies.</p>
+      <a href="#" class="cta-button secondary">Coming Soon</a>
+    </div>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MoonDrip by Root Kore Labs. All rights reserved.</p>
+    <p class="legal-content">⚠️ This is a backtest tool, not a prediction engine. Results are based on historical data and do not guarantee future performance.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
