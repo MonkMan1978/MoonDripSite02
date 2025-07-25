@@ -170,6 +170,16 @@ a { color: inherit; text-decoration:none; }
   box-shadow: 0 0 30px rgba(120, 255, 255, 0.4);
 }
 
+.cta-banner {
+  background: rgba(26, 22, 37, 0.9);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 0 30px rgba(120, 255, 255, 0.2);
+}
+
 /* —— Hero Section —— */
 .hero {
   text-align: center;
