@@ -66,6 +66,39 @@ a { color: inherit; text-decoration:none; }
   background: var(--accent-gradient);
   transition:width 0.3s ease;
 }
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #78ffff 0%, #ff77c6 100%);
+  color: #1a1625;
+  padding: 18px 40px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 30px rgba(120, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(120, 255, 255, 0.4);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: #78ffff;
+  border: 2px solid #78ffff;
+  box-shadow: 0 0 20px rgba(120, 255, 255, 0.2);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(120, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(120, 255, 255, 0.4);
+}
 
 /* —— Hero Section —— */
 .hero {
